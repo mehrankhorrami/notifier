@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="notifier.style.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="notifier.script.js"></script>
+    </head>
+    <body>
+        <button onclick="addNotifier()">popup Notify</button>
+        <script>
+            function addNotifier(){
+                var notifier = $.Notifier("success message", "this is a test of a success message.", "success", {
+                    vertical_align:"top",
+                    rtl:false,
+                    btns:[
+                        {
+                            label:"ok",
+                            type:"success",
+                            onClick:function(){
+                                debugger;
+                            }
+                        },
+                        {
+                            label:"cancel",
+                            type:"default",
+                            onClick:function(){
+                                debugger;
+                            }
+                        }                        
+                    ],
+                    callback:function(){
+                        debugger;
+                    }
+                });
+
+            }
+        </script>
+    </body>
+</html>
